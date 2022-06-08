@@ -25,11 +25,13 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
+        //Jump if spacebar or W is pressed 
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) && grounded){
             player_rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
         }
     }
 
+    // Check for collision on ground so we can jump again
     private void OnCollisionEnter(Collision other) {
         grounded = true;
     }
