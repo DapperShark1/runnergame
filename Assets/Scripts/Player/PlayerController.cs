@@ -6,11 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 5.0f;
-
+    public float jumpPower;
+    public float gravityModifier;
+    public bool grounded = true;
     public float horizontalInput;
+
+    private Rigidbody player_rigidbody;
     void Start()
     {
-        
+        player_rigidbody = GetComponent<Rigidbody>();
+        Physics.gravity *= gravityModifier;
     }
 
     // Update is called once per frame
@@ -19,5 +24,13 @@ public class PlayerController : MonoBehaviour
         // Move player horizontally based on horizontal Input
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) && grounded){
+            player_rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        grounded = true;
     }
 }
