@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 50235273272958602}
   - component: {fileID: 50235273272958601}
   - component: {fileID: 50235273272958600}
+  - component: {fileID: 1234331677}
   m_Layer: 0
   m_Name: Sawblade_Placeholder
   m_TagString: Untagged
@@ -111,3 +112,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 2000
+--- !u!114 &1234331677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363757773418742139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bd41c2b6d9e25438659db4d89e90a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
