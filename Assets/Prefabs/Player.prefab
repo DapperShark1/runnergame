@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5622339291350688939}
   - component: {fileID: 5622339291350688940}
   - component: {fileID: 5622339291350688941}
+  - component: {fileID: 8787545202212261506}
   - component: {fileID: 5622339291350688942}
   - component: {fileID: 5622339291350688943}
-  - component: {fileID: 8787545202212261506}
+  - component: {fileID: 1836602488}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -96,6 +97,19 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775305790660368144}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &8787545202212261506
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775305790660368144}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -134,19 +148,18 @@ MonoBehaviour:
   gravityModifier: 1
   grounded: 1
   horizontalInput: 0
---- !u!135 &8787545202212261506
-SphereCollider:
+--- !u!114 &1836602488
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775305790660368144}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bd41c2b6d9e25438659db4d89e90a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5622339291719174140
 GameObject:
   m_ObjectHideFlags: 0
